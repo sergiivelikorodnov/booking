@@ -9,7 +9,7 @@ import "./reserve.css";
 
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading } = useFetch(`/hotels/room/${hotelId}`);
+  const { data } = useFetch(`/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   const handleSelect = (e) => {
